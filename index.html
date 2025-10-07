@@ -283,13 +283,48 @@
                 showToast('登录成功！正在跳转到演示后台...', 'success');
                 closeModal('loginModal');
                 
-                // 跳转到演示后台
+                // 创建跳转按钮
                 setTimeout(() => {
-                    showToast('正在为您打开演示后台...', 'info');
+                    const jumpDiv = document.createElement('div');
+                    jumpDiv.style.cssText = `
+                        position: fixed;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        background: white;
+                        padding: 30px;
+                        border-radius: 15px;
+                        box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+                        z-index: 10000;
+                        text-align: center;
+                        max-width: 400px;
+                    `;
+                    
+                    jumpDiv.innerHTML = `
+                        <h3 style="color: #333; margin-bottom: 15px;">🎉 登录成功！</h3>
+                        <p style="color: #666; margin-bottom: 20px;">点击下方按钮进入演示后台体验完整功能</p>
+                        <button onclick="window.open('https://gta5fuzhup.cn/demo/', '_blank'); this.parentElement.remove();" 
+                                style="background: #2196F3; color: white; border: none; padding: 12px 25px; border-radius: 8px; cursor: pointer; font-size: 16px; margin: 5px;">
+                            🚀 进入演示后台
+                        </button>
+                        <button onclick="this.parentElement.remove();" 
+                                style="background: #f5f5f5; color: #666; border: none; padding: 12px 25px; border-radius: 8px; cursor: pointer; font-size: 16px; margin: 5px;">
+                            稍后再说
+                        </button>
+                        <p style="color: #999; font-size: 12px; margin-top: 15px;">演示账号：demo / demo123</p>
+                    `;
+                    
+                    document.body.appendChild(jumpDiv);
+                    
+                    // 3秒后自动尝试跳转
                     setTimeout(() => {
-                        window.open('https://gta5fuzhup.cn/demo/', '_blank');
-                        showToast('演示后台已在新窗口打开，请使用相同账号登录', 'info', 6000);
-                    }, 1500);
+                        try {
+                            window.open('https://gta5fuzhup.cn/demo/', '_blank');
+                            showToast('演示后台已在新窗口打开', 'success');
+                        } catch(e) {
+                            showToast('请点击上方按钮进入演示后台', 'info');
+                        }
+                    }, 3000);
                 }, 1000);
             } else {
                 showToast('演示账号：用户名 demo，密码 demo123', 'warning');
