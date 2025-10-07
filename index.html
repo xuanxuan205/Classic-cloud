@@ -273,12 +273,56 @@
         // 表单提交处理
         document.getElementById('loginForm').addEventListener('submit', function(e) {
             e.preventDefault();
-            showToast('登录功能需要后端服务支持，请联系管理员', 'warning');
+            const formData = new FormData(this);
+            
+            // 验证演示账号
+            const username = formData.get('username');
+            const password = formData.get('password');
+            
+            if (username === 'demo' && password === 'demo123') {
+                showToast('登录成功！欢迎使用演示版本', 'success');
+                closeModal('loginModal');
+                setTimeout(() => {
+                    showToast('演示版本：实际功能请访问 https://gta5fuzhup.cn', 'info', 5000);
+                }, 1000);
+            } else {
+                showToast('演示账号：用户名 demo，密码 demo123', 'warning');
+            }
         });
 
         document.getElementById('registerForm').addEventListener('submit', function(e) {
             e.preventDefault();
-            showToast('注册功能需要后端服务支持，请联系管理员', 'warning');
+            const formData = new FormData(this);
+            
+            // 表单验证
+            const username = formData.get('username');
+            const email = formData.get('email');
+            const password = formData.get('password');
+            const confirmPassword = formData.get('confirm_password');
+            
+            if (!username || username.length < 3) {
+                showToast('用户名至少需要3个字符', 'error');
+                return;
+            }
+            
+            if (!email || !email.includes('@')) {
+                showToast('请输入有效的邮箱地址', 'error');
+                return;
+            }
+            
+            if (!password || password.length < 6) {
+                showToast('密码至少需要6个字符', 'error');
+                return;
+            }
+            
+            if (password !== confirmPassword) {
+                showToast('两次输入的密码不一致', 'error');
+                return;
+            }
+            
+            showToast('注册成功！请访问 https://gta5fuzhup.cn 使用完整功能', 'success');
+            closeModal('registerModal');
+            setTimeout(() => showLogin(), 1000);
         });
     </script>
 </body>
