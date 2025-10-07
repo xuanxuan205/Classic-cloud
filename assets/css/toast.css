@@ -1,0 +1,55 @@
+/* Toast 通知样式 */
+
+.toast {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 15px 20px;
+    border-radius: 8px;
+    color: white;
+    font-weight: 500;
+    font-size: 14px;
+    z-index: 10000;
+    transform: translateX(400px);
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    max-width: 350px;
+    word-wrap: break-word;
+}
+
+.toast.show {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+/* Toast 类型样式 */
+.toast-success {
+    background: linear-gradient(135deg, #4CAF50, #45a049);
+}
+
+.toast-error {
+    background: linear-gradient(135deg, #f44336, #da190b);
+}
+
+.toast-warning {
+    background: linear-gradient(135deg, #ff9800, #f57c00);
+}
+
+.toast-info {
+    background: linear-gradient(135deg, #2196F3, #1976D2);
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .toast {
+        right: 10px;
+        left: 10px;
+        max-width: none;
+        transform: translateY(-100px);
+    }
+    
+    .toast.show {
+        transform: translateY(0);
+    }
+}

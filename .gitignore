@@ -1,0 +1,36 @@
+# 忽略源码文件
+*.php
+config/
+includes/
+api/
+admin/
+cron/
+install/
+logs/
+cache/
+uploads/
+
+# 保留的文件
+!index.html
+!assets/
+!docs/
+!README.md
+!.gitignore
+
+# 系统文件
+.DS_Store
+Thumbs.db
+*.log
+.env
+.env.local
+.env.production
+
+# IDE文件
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# 临时文件
+*.tmp
+*.temp

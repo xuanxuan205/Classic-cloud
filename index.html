@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>经典云网盘 - 安全可靠的云存储服务</title>
+    <meta name="description" content="经典云网盘，提供安全可靠的云存储服务，支持文件上传下载、在线预览、分享管理等功能">
+    <meta name="keywords" content="云盘,网盘,文件存储,文件分享,在线存储">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="assets/images/favicon.png" type="image/png">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/toast.css">
+    
+    <!-- Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <i class="material-icons">cloud</i>
+                <span>经典云网盘</span>
+            </div>
+            <div class="nav-menu">
+                <a href="#home" class="nav-link active">首页</a>
+                <a href="#features" class="nav-link">功能特色</a>
+                <a href="#about" class="nav-link">关于我们</a>
+                <a href="#contact" class="nav-link">联系我们</a>
+                <button class="btn-login" onclick="showLogin()">登录</button>
+            </div>
+            <div class="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 主页面 -->
+    <main>
+        <!-- 英雄区域 -->
+        <section id="home" class="hero">
+            <div class="hero-container">
+                <div class="hero-content">
+                    <h1>经典云网盘</h1>
+                    <p>安全可靠的云存储服务，让您的文件随时随地可访问</p>
+                    <div class="hero-buttons">
+                        <button class="btn-primary" onclick="showLogin()">立即使用</button>
+                        <button class="btn-secondary" onclick="showRegister()">免费注册</button>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="cloud-animation">
+                        <i class="material-icons">cloud</i>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 功能特色 -->
+        <section id="features" class="features">
+            <div class="container">
+                <h2>功能特色</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <i class="material-icons">cloud_upload</i>
+                        <h3>文件上传</h3>
+                        <p>支持拖拽上传，多文件批量上传，断点续传</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="material-icons">folder</i>
+                        <h3>文件管理</h3>
+                        <p>完整的文件管理功能，支持文件夹创建、重命名、移动</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="material-icons">share</i>
+                        <h3>文件分享</h3>
+                        <p>生成分享链接，支持密码保护和有效期设置</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="material-icons">visibility</i>
+                        <h3>在线预览</h3>
+                        <p>支持图片、文档、视频等多种格式在线预览</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="material-icons">security</i>
+                        <h3>安全保护</h3>
+                        <p>多层安全防护，数据加密存储，保护您的隐私</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="material-icons">devices</i>
+                        <h3>多端同步</h3>
+                        <p>支持电脑、手机、平板等多设备访问和同步</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 关于我们 -->
+        <section id="about" class="about">
+            <div class="container">
+                <div class="about-content">
+                    <div class="about-text">
+                        <h2>关于经典云网盘</h2>
+                        <p>经典云网盘是一个功能完整、安全可靠的云存储解决方案。我们致力于为用户提供最优质的文件存储和管理服务。</p>
+                        <ul>
+                            <li><i class="material-icons">check</i> 企业级安全保障</li>
+                            <li><i class="material-icons">check</i> 7x24小时稳定服务</li>
+                            <li><i class="material-icons">check</i> 专业技术支持</li>
+                            <li><i class="material-icons">check</i> 持续功能更新</li>
+                        </ul>
+                    </div>
+                    <div class="about-stats">
+                        <div class="stat-item">
+                            <h3>10,000+</h3>
+                            <p>注册用户</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3>1TB+</h3>
+                            <p>存储容量</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3>99.9%</h3>
+                            <p>服务可用性</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 联系我们 -->
+        <section id="contact" class="contact">
+            <div class="container">
+                <h2>联系我们</h2>
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="material-icons">email</i>
+                            <div>
+                                <h4>邮箱支持</h4>
+                                <p>lyd9527@zohomail.cn</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="material-icons">language</i>
+                            <div>
+                                <h4>官方网站</h4>
+                                <p>https://gta5fuzhup.cn</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="material-icons">code</i>
+                            <div>
+                                <h4>开源项目</h4>
+                                <p>GitHub: xuanxuan205/Classic-cloud</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <i class="material-icons">cloud</i>
+                    <span>经典云网盘</span>
+                </div>
+                <div class="footer-links">
+                    <a href="#privacy">隐私政策</a>
+                    <a href="#terms">服务条款</a>
+                    <a href="#help">帮助中心</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 经典云网盘. 保留所有权利.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 登录模态框 -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>用户登录</h3>
+                <span class="close" onclick="closeModal('loginModal')">&times;</span>
+            </div>
+            <div class="modal-body">
+                <form id="loginForm">
+                    <div class="form-group">
+                        <label for="username">用户名</label>
+                        <input type="text" id="username" name="username" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">密码</label>
+                        <input type="password" id="password" name="password" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="remember"> 记住我
+                        </label>
+                    </div>
+                    <button type="submit" class="btn-primary btn-full">登录</button>
+                </form>
+                <div class="modal-footer">
+                    <p>还没有账号？ <a href="#" onclick="showRegister()">立即注册</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 注册模态框 -->
+    <div id="registerModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>用户注册</h3>
+                <span class="close" onclick="closeModal('registerModal')">&times;</span>
+            </div>
+            <div class="modal-body">
+                <form id="registerForm">
+                    <div class="form-group">
+                        <label for="reg_username">用户名</label>
+                        <input type="text" id="reg_username" name="username" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="reg_email">邮箱</label>
+                        <input type="email" id="reg_email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="reg_password">密码</label>
+                        <input type="password" id="reg_password" name="password" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="reg_confirm_password">确认密码</label>
+                        <input type="password" id="reg_confirm_password" name="confirm_password" required>
+                    </div>
+                    <button type="submit" class="btn-primary btn-full">注册</button>
+                </form>
+                <div class="modal-footer">
+                    <p>已有账号？ <a href="#" onclick="showLogin()">立即登录</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast 通知 -->
+    <div id="toast" class="toast"></div>
+
+    <!-- JavaScript -->
+    <script src="assets/js/main.js"></script>
+    <script>
+        // 服务状态检查
+        document.addEventListener('DOMContentLoaded', function() {
+            // 显示服务状态
+            showToast('欢迎访问经典云网盘！', 'success');
+            
+            // 检查是否从分享链接访问
+            const urlParams = new URLSearchParams(window.location.search);
+            if (urlParams.get('share')) {
+                showToast('请登录后查看分享内容', 'info');
+                setTimeout(() => showLogin(), 1000);
+            }
+        });
+
+        // 表单提交处理
+        document.getElementById('loginForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            showToast('登录功能需要后端服务支持，请联系管理员', 'warning');
+        });
+
+        document.getElementById('registerForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            showToast('注册功能需要后端服务支持，请联系管理员', 'warning');
+        });
+    </script>
+</body>
+</html>
