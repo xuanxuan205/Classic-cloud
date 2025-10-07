@@ -280,10 +280,16 @@
             const password = formData.get('password');
             
             if (username === 'demo' && password === 'demo123') {
-                showToast('登录成功！欢迎使用演示版本', 'success');
+                showToast('登录成功！正在跳转到演示后台...', 'success');
                 closeModal('loginModal');
+                
+                // 跳转到演示后台
                 setTimeout(() => {
-                    showToast('演示版本：实际功能请访问 https://gta5fuzhup.cn', 'info', 5000);
+                    showToast('正在为您打开演示后台...', 'info');
+                    setTimeout(() => {
+                        window.open('https://gta5fuzhup.cn/demo/', '_blank');
+                        showToast('演示后台已在新窗口打开，请使用相同账号登录', 'info', 6000);
+                    }, 1500);
                 }, 1000);
             } else {
                 showToast('演示账号：用户名 demo，密码 demo123', 'warning');
