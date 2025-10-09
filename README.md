@@ -36,13 +36,13 @@
 经典云采用模块化架构设计，主要包含以下核心模块：
 
 ### 📦 系统模块
-- **用户认证系统** (`includes/class.auth.php`) - 登录验证、会话管理、权限控制
-- **数据库操作层** (`includes/class.database.php`) - PDO封装、预处理语句、事务管理
-- **文件管理核心** (`includes/class.filemanager.php`) - 文件上传下载、目录管理、文件操作
-- **安全防护模块** (`includes/class.security.php`) - XSS过滤、CSRF防护、输入验证
-- **分享系统** (`includes/class.share.php`) - 文件分享、链接生成、权限验证
-- **管理后台** (`admin/`) - 系统管理、用户管理、数据统计
-- **API接口服务** (`api/`) - 文件操作API、上传下载接口、系统接口
+- **用户认证系统** - 登录验证、会话管理、多级权限控制
+- **数据库操作层** - PDO封装、预处理语句、安全事务管理
+- **文件管理引擎** - 文件上传下载、目录管理、批量操作
+- **安全防护中心** - XSS过滤、CSRF防护、输入验证、访问控制
+- **分享系统** - 安全分享、链接管理、权限验证
+- **管理控制台** - 系统监控、用户管理、数据统计
+- **API接口服务** - RESTful接口、文件操作、系统集成
 
 ### 🛠️ 技术架构
 - **后端语言**: PHP 7.4+ (面向对象设计)
@@ -91,18 +91,22 @@
 
 4. **系统配置**
    ```php
-   // 编辑 config/config.php 文件
+   // 编辑系统配置文件
    // 配置数据库连接信息
-   define('DB_HOST', 'localhost');
-   define('DB_NAME', 'classic_cloud');
-   define('DB_USER', 'your_username');
-   define('DB_PASS', 'your_password');
+   $config = [
+       'database' => [
+           'host' => 'localhost',
+           'dbname' => 'your_database',
+           'username' => 'your_username',
+           'password' => 'your_password'
+       ]
+   ];
    ```
 
 5. **访问系统**
-   - **前台入口**: `index.php` - 用户文件管理界面
-   - **管理后台**: `admin/index.php` - 系统管理界面
-   - **API接口**: `api/` - RESTful API服务
+   - **用户界面**: 访问网站首页进入文件管理界面
+   - **管理后台**: 通过管理员入口进入系统管理
+   - **API服务**: 提供完整的RESTful API接口
 
 ## 📚 文档说明
 
