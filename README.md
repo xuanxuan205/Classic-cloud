@@ -35,52 +35,74 @@
 
 经典云采用模块化架构设计，主要包含以下核心模块：
 
-### 📦 核心模块
-- **用户管理模块** - 用户认证、权限控制、个人资料管理
-- **文件管理模块** - 文件上传、下载、预览、组织管理
-- **分享模块** - 文件分享链接生成、权限控制
-- **管理后台** - 系统管理、用户管理、监控统计
-- **API接口** - RESTful API，支持第三方集成
+### 📦 系统模块
+- **用户认证系统** (`includes/class.auth.php`) - 登录验证、会话管理、权限控制
+- **数据库操作层** (`includes/class.database.php`) - PDO封装、预处理语句、事务管理
+- **文件管理核心** (`includes/class.filemanager.php`) - 文件上传下载、目录管理、文件操作
+- **安全防护模块** (`includes/class.security.php`) - XSS过滤、CSRF防护、输入验证
+- **分享系统** (`includes/class.share.php`) - 文件分享、链接生成、权限验证
+- **管理后台** (`admin/`) - 系统管理、用户管理、数据统计
+- **API接口服务** (`api/`) - 文件操作API、上传下载接口、系统接口
 
-### 🔧 技术架构
-- **前端技术**: HTML5, CSS3, JavaScript
-- **后端技术**: PHP 7.4+, MySQL 5.7+
-- **Web服务器**: Apache/Nginx
-- **缓存技术**: 文件缓存/Redis（可选）
-- **安全机制**: JWT认证、数据加密、访问控制
+### 🛠️ 技术架构
+- **后端语言**: PHP 7.4+ (面向对象设计)
+- **数据库**: MySQL 5.7+ / MariaDB 10.3+ (PDO封装)
+- **前端技术**: HTML5 + CSS3 + JavaScript (响应式设计)
+- **Web服务器**: Apache 2.4+ / Nginx 1.18+ (支持URL重写)
+- **安全防护**: .htaccess配置 + XSS/CSRF防护 + SQL注入防护
+- **架构模式**: MVC模式 + 模块化设计
 
 ## 🚀 快速开始
 
 ### 环境要求
 
-- PHP >= 7.4
-- MySQL >= 5.7
-- Apache/Nginx Web服务器
-- 支持URL重写
+- **PHP**: 7.4+ (推荐 8.0+)，需要PDO、GD、mbstring扩展
+- **数据库**: MySQL 5.7+ 或 MariaDB 10.3+
+- **Web服务器**: Apache 2.4+ (mod_rewrite) 或 Nginx 1.18+
+- **存储空间**: 最少1GB可用空间
+- **内存**: 建议512MB+
 
 ### 安装步骤
 
-1. **克隆项目**
+1. **下载源码**
    ```bash
    git clone git@github.com:xuanxuan205/Classic-cloud.git
    cd Classic-cloud
    ```
 
 2. **配置Web服务器**
-   - 将项目部署到Web服务器根目录
-   - 确保 `uploads/` 和 `cache/` 目录可写
+   ```bash
+   # 设置目录权限
+   chmod 755 -R ./
+   chmod 777 uploads/ cache/ logs/
+   
+   # Apache用户需要启用mod_rewrite模块
+   # Nginx用户请配置URL重写规则
+   ```
 
 3. **数据库配置**
-   - 创建MySQL数据库
-   - 导入 `install/sql/` 目录下的数据库文件
+   ```sql
+   -- 创建数据库
+   CREATE DATABASE classic_cloud CHARACTER SET utf8mb4;
+   
+   -- 导入数据表结构
+   -- 数据库文件位于 install/sql/ 目录
+   ```
 
 4. **系统配置**
-   - 复制配置模板并修改数据库连接信息
-   - 运行安装程序完成初始化
+   ```php
+   // 编辑 config/config.php 文件
+   // 配置数据库连接信息
+   define('DB_HOST', 'localhost');
+   define('DB_NAME', 'classic_cloud');
+   define('DB_USER', 'your_username');
+   define('DB_PASS', 'your_password');
+   ```
 
 5. **访问系统**
-   - 前台访问：`https://your-domain.com`
-   - 管理后台：`https://your-domain.com/admin`
+   - **前台入口**: `index.php` - 用户文件管理界面
+   - **管理后台**: `admin/index.php` - 系统管理界面
+   - **API接口**: `api/` - RESTful API服务
 
 ## 📚 文档说明
 
