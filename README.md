@@ -1,8 +1,8 @@
 # 经典云 (Classic Cloud)
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Demo](https://img.shields.io/badge/Demo-在线演示-blue)](https://gta5fuzhup.cn)
-[![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-Live-brightgreen)](https://gta5fuzhup.cn)
+[![Demo](https://img.shields.io/badge/Demo-在线演示-blue)](https://xuanxuan205.github.io/Classic-cloud/)
+[![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-Live-brightgreen)](https://xuanxuan205.github.io/Classic-cloud/)
 [![Issues](https://img.shields.io/github/issues/xuanxuan205/Classic-cloud)](https://github.com/xuanxuan205/Classic-cloud/issues)
 [![Stars](https://img.shields.io/github/stars/xuanxuan205/Classic-cloud)](https://github.com/xuanxuan205/Classic-cloud/stargazers)
 
@@ -10,9 +10,10 @@
 
 ## 🎬 在线演示
 
-- **🌐 官方演示**: [https://gta5fuzhup.cn](https://gta5fuzhup.cn)
+- **🌐 项目演示**: [https://xuanxuan205.github.io/Classic-cloud/](https://xuanxuan205.github.io/Classic-cloud/)
 - **📱 移动端体验**: 支持响应式设计，手机端完美适配
 - **🔧 管理后台**: 完整的后台管理功能展示
+- **🏠 官方网站**: [https://gta5fuzhup.cn](https://gta5fuzhup.cn)
 
 > 💡 **提示**: 演示环境为只读模式，如需完整体验请本地部署
 
@@ -125,6 +126,27 @@
 - ✅ 私人使用
 - ❗ 责任限制
 - ❗ 无担保
+
+## 💖 支持作者
+
+如果这个项目对您有帮助，欢迎支持作者继续开发和维护！
+
+### 💰 赞助方式
+
+<div align="center">
+
+| 微信支付 | 支付宝 |
+|---------|--------|
+| <img src="images/wechat_qr_3.png" width="200" alt="微信收款码"> | <img src="images/alipay_qr_3.png" width="200" alt="支付宝收款码"> |
+
+</div>
+
+### 其他支持方式
+- ⭐ 给项目点个Star
+- 🐛 报告Bug和问题
+- 💡 提出功能建议
+- 📢 推荐给朋友使用
+- 📝 完善项目文档
 
 ## 🙏 致谢
 
