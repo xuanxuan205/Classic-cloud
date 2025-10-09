@@ -62,52 +62,26 @@
 - **存储空间**: 最少1GB可用空间
 - **内存**: 建议512MB+
 
-### 安装步骤
+### 快速部署
 
-1. **下载源码**
-   ```bash
-   git clone git@github.com:xuanxuan205/Classic-cloud.git
-   cd Classic-cloud
-   ```
+> 💡 **安全提示**: 详细的安装配置步骤请联系管理员获取，以确保系统安全。
 
-2. **配置Web服务器**
-   ```bash
-   # 设置适当的目录权限
-   chmod 755 -R ./
-   # 确保上传和缓存目录可写
-   chmod 777 相关目录/
-   
-   # Apache: 启用mod_rewrite模块
-   # Nginx: 配置URL重写规则
-   ```
+#### 基本要求
+1. **环境准备** - 配置PHP + MySQL + Web服务器环境
+2. **权限设置** - 设置适当的文件和目录权限
+3. **数据库初始化** - 创建数据库和导入数据结构
+4. **系统配置** - 配置数据库连接和系统参数
+5. **功能测试** - 验证系统功能是否正常
 
-3. **数据库配置**
-   ```sql
-   -- 创建数据库
-   CREATE DATABASE your_database_name CHARACTER SET utf8mb4;
-   
-   -- 导入数据表结构
-   -- 请联系管理员获取数据库结构文件
-   ```
+#### 获取完整部署指南
+- 📧 **技术支持**: [jyd9527@zohomail.cn](mailto:jyd9527@zohomail.cn)
+- 🌐 **官方网站**: [https://gta5fuzhup.cn](https://gta5fuzhup.cn)
+- 📖 **部署文档**: [查看详细部署指南](docs/deployment.md)
 
-4. **系统配置**
-   ```php
-   // 编辑系统配置文件
-   // 配置数据库连接信息
-   $config = [
-       'database' => [
-           'host' => 'localhost',
-           'dbname' => 'your_database',
-           'username' => 'your_username',
-           'password' => 'your_password'
-       ]
-   ];
-   ```
-
-5. **访问系统**
-   - **用户界面**: 访问网站首页进入文件管理界面
-   - **管理后台**: 通过管理员入口进入系统管理
-   - **API服务**: 提供完整的RESTful API接口
+#### 系统访问
+- **用户端**: 通过浏览器访问主页面
+- **管理端**: 通过管理员入口进入后台
+- **API接口**: 支持RESTful API集成
 
 ## 📚 文档说明
 
