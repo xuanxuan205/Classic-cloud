@@ -72,21 +72,22 @@
 
 2. **配置Web服务器**
    ```bash
-   # 设置目录权限
+   # 设置适当的目录权限
    chmod 755 -R ./
-   chmod 777 uploads/ cache/ logs/
+   # 确保上传和缓存目录可写
+   chmod 777 相关目录/
    
-   # Apache用户需要启用mod_rewrite模块
-   # Nginx用户请配置URL重写规则
+   # Apache: 启用mod_rewrite模块
+   # Nginx: 配置URL重写规则
    ```
 
 3. **数据库配置**
    ```sql
    -- 创建数据库
-   CREATE DATABASE classic_cloud CHARACTER SET utf8mb4;
+   CREATE DATABASE your_database_name CHARACTER SET utf8mb4;
    
    -- 导入数据表结构
-   -- 数据库文件位于 install/sql/ 目录
+   -- 请联系管理员获取数据库结构文件
    ```
 
 4. **系统配置**
