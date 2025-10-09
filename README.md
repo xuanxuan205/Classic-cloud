@@ -137,7 +137,7 @@
 
 | 微信支付 | 支付宝 |
 |---------|--------|
-| <img src="images/wechat_qr_3.png" width="200" alt="微信收款码"> | <img src="images/alipay_qr_3.png" width="200" alt="支付宝收款码"> |
+| <img src="https://raw.githubusercontent.com/xuanxuan205/Classic-cloud/main/images/wechat_qr_3.png" width="200" alt="微信收款码"> | <img src="https://raw.githubusercontent.com/xuanxuan205/Classic-cloud/main/images/alipay_qr_3.png" width="200" alt="支付宝收款码"> |
 
 </div>
 
