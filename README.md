@@ -1,11 +1,20 @@
 # 经典云 (Classic Cloud)
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Demo](https://img.shields.io/badge/Demo-在线演示-blue)](https://gta5fuzhup.cn)
 [![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-Live-brightgreen)](https://gta5fuzhup.cn)
 [![Issues](https://img.shields.io/github/issues/xuanxuan205/Classic-cloud)](https://github.com/xuanxuan205/Classic-cloud/issues)
 [![Stars](https://img.shields.io/github/stars/xuanxuan205/Classic-cloud)](https://github.com/xuanxuan205/Classic-cloud/stargazers)
 
 > 🚀 专业的云端文件管理系统 - 安全、高效、易用
+
+## 🎬 在线演示
+
+- **🌐 官方演示**: [https://gta5fuzhup.cn](https://gta5fuzhup.cn)
+- **📱 移动端体验**: 支持响应式设计，手机端完美适配
+- **🔧 管理后台**: 完整的后台管理功能展示
+
+> 💡 **提示**: 演示环境为只读模式，如需完整体验请本地部署
 
 ## 📋 项目简介
 
